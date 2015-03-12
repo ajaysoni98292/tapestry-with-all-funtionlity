@@ -4,4 +4,9 @@
 
     <p>Contact com.sample.tapestry ...</p>
 
+    <t:beaneditform object="info">
+        
+    </t:beaneditform>
+
+
 </html>
