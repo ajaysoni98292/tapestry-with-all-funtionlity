@@ -48,6 +48,4 @@ public class Contact {
         alertManager.info("ajax call");
         return clickZone;
     }
-
-
 }

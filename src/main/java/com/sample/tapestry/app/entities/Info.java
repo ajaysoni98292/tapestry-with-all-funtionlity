@@ -1,6 +1,7 @@
 package com.sample.tapestry.app.entities;
 
 import org.apache.tapestry5.beaneditor.NonVisual;
+import org.apache.tapestry5.beaneditor.Validate;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -20,9 +21,14 @@ public class Info {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
+    @Validate("required, minLength=5")
     private String name;
 
+    @Validate("required, maxLength=10, minLength=10")
     private String mobileNumber;
+
+    @Validate("required,regexp=^\\d{5}(-\\d{4})?$")
+    private String zip;
 
     public long getId() {
         return id;
@@ -46,5 +52,13 @@ public class Info {
 
     public void setMobileNumber(String mobileNumber) {
         this.mobileNumber = mobileNumber;
+    }
+
+    public String getZip() {
+        return zip;
+    }
+
+    public void setZip(String zip) {
+        this.zip = zip;
     }
 }

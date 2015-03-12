@@ -4,7 +4,7 @@
 
     <p>Contact com.sample.tapestry ...</p>
 
-    <t:beaneditform object="info" submitLabel="Submit" reorder="mobileNumber,name"></t:beaneditform>
+    <t:beaneditform object="info" submitLabel="message:submit-label" reorder="mobileNumber,name"></t:beaneditform>
     <!-- This beaneditform is used to automatically create the text box according to the entity -->
 
     <!-- Now understanding on the zone -->
