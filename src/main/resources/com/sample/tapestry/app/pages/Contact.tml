@@ -4,9 +4,20 @@
 
     <p>Contact com.sample.tapestry ...</p>
 
-    <t:beaneditform object="info">
-        
-    </t:beaneditform>
+    <t:beaneditform object="info"></t:beaneditform>
+    <!-- This beaneditform is used to automatically create the text box according to the entity -->
 
+    <!-- Now understanding on the zone -->
+
+    <t:zone t:id="clickZone">
+
+        <t:actionlink t:id="increment">Increment</t:actionlink>
+        <t:actionlink t:id="incrementByAjay" zone="^">Increment by ajax</t:actionlink>
+
+        <br />
+        <br />
+        you have clicked <strong>${clickCount}</strong>
+
+    </t:zone>
 
 </html>

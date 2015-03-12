@@ -1,6 +1,7 @@
 package com.sample.tapestry.app.pages;
 
 import java.util.Date;
+
 import org.apache.tapestry5.annotations.*;
 import org.apache.tapestry5.ioc.annotations.*;
 import org.apache.tapestry5.corelib.components.*;
@@ -8,10 +9,11 @@ import org.apache.tapestry5.SymbolConstants;
 import org.apache.tapestry5.alerts.AlertManager;
 
 /**
- * Start page of application app.
+ * @author ajay
  */
-public class Index
-{
+
+/* This class Index is the first page or start page of the application */
+public class Index {
     @Property
     @Inject
     @Symbol(SymbolConstants.TAPESTRY_VERSION)
@@ -27,20 +29,17 @@ public class Index
     @Inject
     private AlertManager alertManager;
 
-    public Date getCurrentTime()
-    {
+    public Date getCurrentTime() {
         return new Date();
     }
 
-    void onActionFromIncrement()
-    {
+    void onActionFromIncrement() {
         alertManager.info("Increment clicked");
 
         clickCount++;
     }
 
-    Object onActionFromIncrementAjax()
-    {
+    Object onActionFromIncrementAjax() {
         clickCount++;
 
         alertManager.info("Increment (via Ajax) clicked");
